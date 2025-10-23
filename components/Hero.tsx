@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onCtaClick: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
     <section 
       className="relative bg-cover bg-center text-white py-32 px-6"
@@ -15,12 +19,12 @@ const Hero: React.FC = () => {
         <p className="text-lg md:text-2xl font-light mb-8 max-w-3xl mx-auto">
           Réalisez votre rêve d'acheter une maison en améliorant vos cotes Equifax et TransUnion.
         </p>
-        <a
-          href="#contact"
+        <button
+          onClick={onCtaClick}
           className="bg-red-600 text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-red-700 transition-colors duration-300 transform hover:scale-105"
         >
           Consultation Gratuite
-        </a>
+        </button>
       </div>
     </section>
   );

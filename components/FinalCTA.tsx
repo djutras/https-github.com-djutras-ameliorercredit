@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-const FinalCTA: React.FC = () => {
+interface FinalCTAProps {
+  onCtaClick: () => void;
+}
+
+const FinalCTA: React.FC<FinalCTAProps> = ({ onCtaClick }) => {
   return (
     <section id="contact" className="bg-red-700">
       <div 
@@ -14,12 +18,12 @@ const FinalCTA: React.FC = () => {
         <p className="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
           Ne laissez pas un mauvais crédit vous retenir. Contactez-nous dès aujourd'hui pour votre consultation gratuite et sans engagement.
         </p>
-        <a
-          href="#contact-form"
+        <button
+          onClick={onCtaClick}
           className="bg-white text-red-600 font-bold py-4 px-10 rounded-lg text-lg hover:bg-slate-100 transition-colors duration-300 transform hover:scale-105"
         >
           Commencez Maintenant
-        </a>
+        </button>
       </div>
     </section>
   );

@@ -1,7 +1,12 @@
+
 import React from 'react';
 import { HomeIcon } from './icons';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onCtaClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onCtaClick }) => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -10,12 +15,12 @@ const Header: React.FC = () => {
           <span className="text-2xl font-bold text-slate-800">Crédit-Action</span>
         </div>
         <nav>
-          <a
-            href="#contact"
+          <button
+            onClick={onCtaClick}
             className="bg-red-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-700 transition-colors duration-300"
           >
             Gratuit
-          </a>
+          </button>
         </nav>
       </div>
     </header>

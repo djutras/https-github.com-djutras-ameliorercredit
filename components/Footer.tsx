@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { HomeIcon } from './icons';
 
@@ -13,6 +12,14 @@ const Footer: React.FC = () => {
         <p className="text-sm">
           Solutions d'amélioration de crédit pour un avenir financier plus sûr.
         </p>
+        <div className="mt-4 text-sm space-y-1">
+          <p>
+            <a href="tel:514-573-1267" className="hover:text-white transition-colors duration-300">514-573-1267</a>
+          </p>
+          <p>
+            <a href="mailto:ameliorercredit@parcourriel.ca" className="hover:text-white transition-colors duration-300">ameliorercredit@parcourriel.ca</a>
+          </p>
+        </div>
         <p className="text-sm text-slate-400 mt-4">
           © {new Date().getFullYear()} Crédit-Action. Tous droits réservés.
         </p>
